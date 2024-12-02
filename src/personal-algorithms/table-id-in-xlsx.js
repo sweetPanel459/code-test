@@ -15,24 +15,28 @@ const excelSheet = [
 
 // main function
 
-const findTable = (array) => {
-  if (!isTwoDimensionalArray(array)) return;
+const findTable = (excel) => {
+  if (!isTwoDimensionalArray(excel)) return;
 
   const extraValues = [];
   const tablesFound = [];
 
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
+  for (let i = 0; i < excel.length; i++) {
+    for (let ii = 0; ii < excel[i].length; ii++) {
+      if (excel[i][ii] == null) continue;
+    }
   }
 };
 
-const generateTable = (array, params) => { };
+const evaluationRows = (i, ii) => {};
+
+const generateTable = (array, params) => {};
 
 // functions helpers
 
-const storeTableRange = () => { };
+const storeTableRange = () => {};
 
-const storeExtraValue = () => { };
+const storeExtraValue = () => {};
 
 const isTwoDimensionalArray = (array) =>
   array.some((item) => Array.isArray(item));
