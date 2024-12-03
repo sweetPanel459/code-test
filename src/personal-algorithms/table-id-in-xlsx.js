@@ -21,9 +21,29 @@ const findTable = (excel) => {
   const extraValues = [];
   const tablesFound = [];
 
+  let matchValue = false;
+  let lenghtRangeRow = 0;
+
+  // NOTE:
+  // - Hacer una funcion que guarde el length en un objeto y su posicion absoluta con respecto al verdadero array
+  //   esto para poder evalur consecutivamente si tiene abajo
+  // TODO:
+  // 1. Crear una funcion que evalue si las casillas tiene el valor null y retornar false :hecho:
+  // 2. Crear una funcion que si es true (casilla!==null) va creando un objeto con el valor total de lenghtRange
+  //    y con la posicion de cuando empezo y finalizo, cuando haya finalizado retornar un objeto completo con el
+  //    rango y length de donde se encontro valores. Length, initialRow y finalRow.
+  // 3. una funcion que se le pasa el objeto anterior y evalue, si un valor es unico, que lo busque en el array
+  //    original y lo guarde en extraValues.
+  // 4. Funcion que una vez se haya finalizado la evaluacion y creacion de los objetos anteriores este analizara
+  //    si hay alguna concidencia respecto a las filas (si estan alineadas) y crear un objeto mas normalizado con
+  //    los parametros de cada tabla. InitialRow, finalRow, InitialColumn y finalColumn
+
   for (let i = 0; i < excel.length; i++) {
     for (let ii = 0; ii < excel[i].length; ii++) {
-      if (excel[i][ii] == null) continue;
+      matchValue = theIndexIsNull(excel, i, ii);
+      if (matchValue) {
+        lenghtRangeRow++;
+      } else lenghtRangeRow = 0;
     }
   }
 };
@@ -37,6 +57,8 @@ const generateTable = (array, params) => {};
 const storeTableRange = () => {};
 
 const storeExtraValue = () => {};
+
+const theIndexIsNull = (excel, i, ii) => (excel[i][ii] == null ? false : true);
 
 const isTwoDimensionalArray = (array) =>
   array.some((item) => Array.isArray(item));
