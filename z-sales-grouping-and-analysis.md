@@ -32,17 +32,77 @@
   deben ser ignoradas y registradas en un log.
 - Se busca un tiempo de ejecución razonable (menos de 10 segundos para 1 millón de registros en hardware promedio).
 
-## Formato (example)
+## Ideas para desarrollo (mias)
+
+1. Funcion que se le pasara el array de entrada y que confirme el formato de cada sub objeto.
+2. Funcion para el resumen general.
+3. Funcion para el ventas generadas.
+4. Funcion para el ventas por categoria y producto
+5. Funcion para el Estacionalidad mensual
+6. Funcion para el alerta de datos anomalos
+
+> Las funciones constructoras de output retornara su parte dada del output
+
+## Formato (ejemplo)
 
 **Input**:
 
 ```json
-    {"id_transaccion": 1, "fecha": "2024-01-15", "categoria": "Electrónica", "producto": "Teléfono", "region": "Norte", "cantidad": 3, "precio_unitario": 300.0},
-    {"id_transaccion": 2, "fecha": "2024-01-20", "categoria": "Electrónica", "producto": "Laptop", "region": "Sur", "cantidad": 1, "precio_unitario": 800.0},
-    {"id_transaccion": 3, "fecha": "2024-02-10", "categoria": "Muebles", "producto": "Silla", "region": "Norte", "cantidad": 5, "precio_unitario": 50.0},
-    {"id_transaccion": 4, "fecha": "2024-02-15", "categoria": "Muebles", "producto": "Mesa", "region": "Este", "cantidad": 2, "precio_unitario": 150.0},
-    {"id_transaccion": 5, "fecha": "2024-03-01", "categoria": "Electrónica", "producto": "Teléfono", "region": "Norte", "cantidad": -1, "precio_unitario": 300.0},  // Erróneo
-    {"id_transaccion": 6, "fecha": "2024-03-10", "categoria": "Muebles", "producto": "Silla", "region": "Sur", "cantidad": 3, "precio_unitario": 0.0}  // Erróneo
+[
+  {
+    "id_transaccion": 1,
+    "fecha": "2024-01-15",
+    "categoria": "Electrónica",
+    "producto": "Teléfono",
+    "region": "Norte",
+    "cantidad": 3,
+    "precio_unitario": 300.0
+  },
+  {
+    "id_transaccion": 2,
+    "fecha": "2024-01-20",
+    "categoria": "Electrónica",
+    "producto": "Laptop",
+    "region": "Sur",
+    "cantidad": 1,
+    "precio_unitario": 800.0
+  },
+  {
+    "id_transaccion": 3,
+    "fecha": "2024-02-10",
+    "categoria": "Muebles",
+    "producto": "Silla",
+    "region": "Norte",
+    "cantidad": 5,
+    "precio_unitario": 50.0
+  },
+  {
+    "id_transaccion": 4,
+    "fecha": "2024-02-15",
+    "categoria": "Muebles",
+    "producto": "Mesa",
+    "region": "Este",
+    "cantidad": 2,
+    "precio_unitario": 150.0
+  },
+  {
+    "id_transaccion": 5,
+    "fecha": "2024-03-01",
+    "categoria": "Electrónica",
+    "producto": "Teléfono",
+    "region": "Norte",
+    "cantidad": -1,
+    "precio_unitario": 300.0
+  }, // Erróneo
+  {
+    "id_transaccion": 6,
+    "fecha": "2024-03-10",
+    "categoria": "Muebles",
+    "producto": "Silla",
+    "region": "Sur",
+    "cantidad": 3,
+    "precio_unitario": 0.0
+  } // Erróneo
 ]
 ```
 
