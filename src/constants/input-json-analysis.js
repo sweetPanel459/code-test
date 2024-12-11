@@ -1,3 +1,13 @@
+export const templateJson = {
+  Id_transaccion: null,
+  Fecha: null,
+  Categoria: null,
+  Producto: null,
+  Region: null,
+  Cantidad: null,
+  Precio_unitario: null,
+};
+
 export const inputJson = [
   {
     Id_transaccion: 1,
