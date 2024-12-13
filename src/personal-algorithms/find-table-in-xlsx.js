@@ -48,15 +48,15 @@ const findTable = (excel) => {
   }
 };
 
-const evaluationRows = (i, ii) => {};
+const evaluationRows = (i, ii) => { };
 
-const generateTable = (array, params) => {};
+const generateTable = (array, params) => { };
 
 // functions helpers
 
-const storeTableRange = () => {};
+const storeTableRange = () => { };
 
-const storeExtraValue = () => {};
+const storeExtraValue = () => { };
 
 const theIndexIsNull = (excel, i, ii) => (excel[i][ii] == null ? false : true);
 
