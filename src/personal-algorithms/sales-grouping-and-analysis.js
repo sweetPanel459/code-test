@@ -21,7 +21,16 @@ const confirmObjectFormat = (object, template) => {
   }
 };
 
-const AnomalyDataDetection = () => { };
+// TODO :
+// 1. Validacion de que la fecha no sea superior a la fetcha de hoy.
+// 2. Validacion de que la cantidad no sea negativa.
+// 3. Validacion de que el precio no sea negativo.
+
+const AnomalyDataDetection = (object) => {
+  const validationRules = {
+    amount: object.Cantidad < 0,
+  };
+};
 
 const generalSummary = (object) => {
   let totalIncome = 0;
@@ -43,6 +52,7 @@ const generalSummary = (object) => {
 
 // utils functions
 
+const isFutureDate = () => { };
 // main call
 
 salesGroupingAndAnalysis();
