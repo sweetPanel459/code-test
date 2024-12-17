@@ -60,7 +60,7 @@ export const inputJson = [
     Categoria: "Muebles",
     Producto: "Silla",
     Region: "Sur",
-    Cantidad: 3,
+    Cantidad: 0,
     Precio_unitario: 0.0,
   }, // Erróneo
 ];
